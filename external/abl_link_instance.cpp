@@ -43,7 +43,7 @@ void AblLinkWrapper::set_offset(double offset_ms) {
 ableton::Link::SessionState& AblLinkWrapper::acquireAudioSessionState(
     std::chrono::microseconds *current_time) {
   if (invocation_count++ == 0) {
-    const int n = link.numPeers();
+    const size_t n = link.numPeers();
     if (n != num_peers && num_peers_sym->s_thing) {
       pd_float(num_peers_sym->s_thing, n);
       num_peers = n;

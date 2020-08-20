@@ -10,3 +10,5 @@ captures
 *.so
 *.dylib
 *.pd_darwin
+/external/.vs
+/external/abl_link~.dll

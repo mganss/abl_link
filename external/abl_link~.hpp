@@ -7,8 +7,12 @@
 #ifndef __ABL_LINK_TILDE_H__
 #define __ABL_LINK_TILDE_H__
 
+#ifdef WIN32
+#define DLLEXPORT __declspec(dllexport)
+#endif
+
 extern "C" {
-  void abl_link_tilde_setup();
+  DLLEXPORT void abl_link_tilde_setup();
 }
 
 #endif

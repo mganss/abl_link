@@ -163,7 +163,7 @@ static void abl_link_tilde_free(t_abl_link_tilde *x) {
 
 extern "C" {
 
-void abl_link_tilde_setup() {
+DLLEXPORT void abl_link_tilde_setup() {
   post("setting up abl_link~");
   abl_link_tilde_class = class_new(gensym("abl_link~"),
                    (t_newmethod)abl_link_tilde_new,
